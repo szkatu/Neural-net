@@ -55,7 +55,7 @@ double Neuron::sumDer(const Layer& l)
  }
  double  Neuron::activationFunction(double s)
  {
-	return s >0.5 ? 1:0;
+	return s >0 ? 1:0;
 
  }
 

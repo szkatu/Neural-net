@@ -14,25 +14,26 @@ int main()
 	
 
 	vector <unsigned int> topology;
-	topology.push_back(2);
+		topology.push_back(2);
 		topology.push_back(1);
 	NeuralNet n(topology);
 	
-	while (true) {
+	for (int i = 0; i < 200;i++) {
 
 
 		vector<double> input = { 0.0,1.0,1.0};
 		vector<double> result;
 		vector <double> target = { 0.0 };
 		n.feedForward(input);
-		n.getResults(result);
+		
 		n.backProp(target, eta, alfa);
+		n.getResults(result);
 		for (auto j = result.begin(); j != result.end(); ++j)
 			cout << *j<<"\n";
 		
 	}
 	
 	
-
+	system("pause");
 	return 0;
 }
