@@ -6,7 +6,7 @@
 
 Connection::Connection()
 {
-	weight = rand() / double(RAND_MAX);
+	weight = (rand() / double(RAND_MAX));//
 }
 
 
